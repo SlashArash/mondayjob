@@ -6,13 +6,10 @@ import "./MyMap.scss";
 const zoom = 13;
 const position = [51.505, -0.09];
 
-const MyMap = () => {
-  const handleClick = () => {
-    alert("clicked");
-  };
+const MyMap = ({ onSelectALocation }) => {
   return (
     <div className="map-container">
-      <Map center={position} zoom={zoom} onClick={handleClick}>
+      <Map center={position} zoom={zoom} onClick={() => onSelectALocation()}>
         <TileLayer
           attribution='&copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
