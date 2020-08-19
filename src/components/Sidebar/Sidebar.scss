@@ -28,3 +28,17 @@
     color: $orange;
   }
 }
+
+.languages {
+  position: absolute;
+  bottom: 1rem;
+  & > span {
+    cursor: pointer;
+    margin: 0.5rem;
+  }
+  & > span.active {
+    cursor: auto;
+    color: $orange;
+    pointer-events: none;
+  }
+}
