@@ -1,6 +1,11 @@
 .main-container {
   display: flex;
-  flex-direction: column;
   flex: 1;
-  padding: 0 3rem;
+  position: relative;
+}
+
+.main-body {
+  padding: 0 2rem;
+  overflow: hidden;
+  flex: 1;
 }
