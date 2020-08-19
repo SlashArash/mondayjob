@@ -1,0 +1,30 @@
+@import "../../utils/style/variables.scss";
+
+.sidebar {
+  padding: 2rem;
+  border-right: 3px solid $smoke;
+}
+
+.logo {
+  max-width: 10rem;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+.nav-link {
+  color: $gray;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  span {
+    color: $black;
+    margin-left: 0.5rem;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: $gray;
+    }
+  }
+  &.active span {
+    color: $orange;
+  }
+}
