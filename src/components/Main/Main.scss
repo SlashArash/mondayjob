@@ -1,6 +1,10 @@
 .main-container {
   display: flex;
-  flex-direction: column;
   flex: 1;
+  position: relative;
+}
+
+.main-body {
   padding: 0 3rem;
+  flex: 1;
 }

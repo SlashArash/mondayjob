@@ -1,0 +1,21 @@
+@import "../../utils/style/variables.scss";
+
+.drawer-container {
+  height: 100%;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+  position: relative;
+  z-index: 1000;
+}
+@media (max-width: $breakpoint-tablet) {
+  .drawer-container {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+  }
+}
