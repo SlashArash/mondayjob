@@ -1,0 +1,25 @@
+@import "../../utils/style/variables.scss";
+
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem;
+  padding-left: 3rem;
+  border-radius: 8px;
+  border: 1px solid $smoke;
+  transition: all 0.3s ease-in-out;
+  &:focus {
+    border-color: $orange;
+  }
+}
+
+.search-icon {
+  position: absolute;
+  top: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  color: $gray;
+}
