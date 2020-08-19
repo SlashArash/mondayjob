@@ -9,18 +9,24 @@ import Drawer from "components/Drawer";
 const Main = () => {
   const [showDrawer, setShowDrawer] = useState(false);
   const [isLoading, setLoading] = useState(false);
-  const [agents, setAgents] = useState();
+  const [info, setInfo] = useState();
 
   const handleGetAgenst = async () => {
     setLoading(true);
     setShowDrawer(true);
 
-    const result = await fetch(
+    const response = await fetch(
       "https://run.mocky.io/v3/b1f53cec-54eb-4524-8038-437e869ac639"
     );
-    setAgents(result);
-    setLoading(false);
-    setShowDrawer(true);
+    if (response.ok) {
+      const json = await response.json();
+      setInfo(json);
+      setLoading(false);
+    } else {
+      alert("HTTP-Error: " + response.status);
+      setLoading(false);
+      setShowDrawer(false);
+    }
   };
 
   return (
@@ -33,7 +39,7 @@ const Main = () => {
       {showDrawer && (
         <Drawer
           loading={isLoading}
-          agents={agents}
+          info={info}
           onClose={() => setShowDrawer(false)}
         />
       )}
