@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { CSSTransition } from "react-transition-group";
 
 import "./Main.scss";
 import Header from "components/Header";
@@ -36,13 +37,20 @@ const Main = () => {
         <SearchBar />
         <MyMap onSelectALocation={handleGetAgenst} />
       </div>
-      {showDrawer && (
+      <CSSTransition
+        in={showDrawer}
+        timeout={300}
+        classNames="drawer"
+        unmountOnExit
+        // onEnter={() => setShowDrawer(true)}
+        // onExited={() => setShowDrawer(false)}
+      >
         <Drawer
           loading={isLoading}
           info={info}
           onClose={() => setShowDrawer(false)}
         />
-      )}
+      </CSSTransition>
     </main>
   );
 };

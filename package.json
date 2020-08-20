@@ -14,7 +14,8 @@
     "react-feather": "^2.0.8",
     "react-i18next": "^11.7.0",
     "react-leaflet": "^2.7.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "react-transition-group": "^4.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
