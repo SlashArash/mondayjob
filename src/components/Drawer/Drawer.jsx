@@ -48,7 +48,7 @@ const Drawer = ({ info, loading, onClose }) => {
                       </div>
                     </div>
                     <div>
-                      <p>
+                      <p className="green-text">
                         4.8<span className="text-light">/5</span>
                       </p>
                       <p className="text-light">{t("Rate")}</p>

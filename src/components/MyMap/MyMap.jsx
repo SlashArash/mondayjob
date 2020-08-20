@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 
 import "./MyMap.scss";
@@ -26,4 +26,4 @@ const MyMap = ({ onSelectALocation }) => {
   );
 };
 
-export default MyMap;
+export default memo(MyMap);
