@@ -15,7 +15,9 @@
   width: 450px;
   display: flex;
   flex-direction: column;
-  position: relative;
+  position: fixed;
+  right: 0;
+  top: 0;
   z-index: 1000;
   padding: 1rem;
   background-color: #fff;
@@ -27,10 +29,7 @@
 @media (max-width: $breakpoint-tablet) {
   .drawer-container {
     width: 100%;
-    position: absolute;
-    right: 0;
     left: 0;
-    top: 0;
   }
 }
 
@@ -42,19 +41,34 @@
   align-items: center;
 }
 
+.title-container {
+  position: relative;
+}
+
 .company-title {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-self: center;
+  align-items: center;
   margin-bottom: 1rem;
   & > img {
     width: 50px;
     height: 50px;
   }
-  & > p {
-    margin: 5px;
+  & > span {
+    margin: 0.5rem;
     font-weight: bold;
+  }
+}
+
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    color: $gray;
   }
 }
 
@@ -85,6 +99,10 @@
   color: $black;
   display: flex;
   align-items: center;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    color: $gray;
+  }
   & span {
     margin-left: 1rem;
   }

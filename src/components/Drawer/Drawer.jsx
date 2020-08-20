@@ -6,7 +6,7 @@ import "./Drawer.scss";
 import apple from "assets/images/apple.png";
 import avatar from "assets/images/avatar.png";
 
-const Drawer = ({ info, loading }) => {
+const Drawer = ({ info, loading, onClose }) => {
   const { t } = useTranslation();
 
   return (
@@ -23,9 +23,14 @@ const Drawer = ({ info, loading }) => {
             </div>
           ) : (
             <>
-              <div className="company-title">
-                <img src={apple} alt={info.name} />
-                <span>{info.name}</span>
+              <div className="title-container">
+                <div className="company-title">
+                  <img src={apple} alt={info.name} />
+                  <span>{info.name}</span>
+                </div>
+                <span className="close" onClick={onClose}>
+                  Close
+                </span>
               </div>
               <div className="info-box">
                 <p className="text-light">{t("Description")}:</p>
